@@ -1,0 +1,30 @@
+
+<html>
+<body>
+
+<h1>Podaj swój pesel:</h1>
+
+<form action="/ragex2.php">
+  <label for="country_code">:</label>
+  <input type="text" id="pesel" name="pesel" pattern="[0-9]{11}" title="" onkeyup="miernik()"><br><br>
+  <input type="submit">
+</form>
+
+
+
+<script>
+
+function miernik() {
+var pesel=document.getElementById("pesel").value; 
+if (pesel.length<=10) 
+document.getElementById("pesel").style.backgroundColor="red";
+
+ if (pesel.length==11)
+document.getElementById("pesel").style.backgroundColor="green";
+
+
+
+if (pesel.length>=12)
+document.getElementById("pesel").style.backgroundColor="red";
+}
+</script>
